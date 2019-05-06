@@ -1,0 +1,44 @@
+metamodel(_x_HSM).
+  metanode(_x_HSM, _x_State).
+  metanode(_x_HSM, _x_Transition).
+  metanode(_x_HSM, _x_CompositeState).
+  metanode(_x_HSM, _x_StateMachine).
+  metanode(_x_HSM, _x_InitialState).
+  metanode(_x_HSM, _x_FinalState).
+
+  metaedge(_x_HSM, association, _x_owningCompositeState, _x_State, _x_CompositeState).
+  metaedge(_x_HSM, association, _x_owningStateMachine, _x_State, _x_StateMachine).
+  metaedge(_x_HSM, association, _x_target, _x_Transition, _x_State).
+  metaedge(_x_HSM, association, _x_target, _x_Transition, _x_CompositeState).
+  metaedge(_x_HSM, association, _x_target, _x_Transition, _x_InitialState).
+  metaedge(_x_HSM, association, _x_target, _x_Transition, _x_FinalState).
+  metaedge(_x_HSM, association, _x_source, _x_Transition, _x_State).
+  metaedge(_x_HSM, association, _x_source, _x_Transition, _x_CompositeState).
+  metaedge(_x_HSM, association, _x_source, _x_Transition, _x_InitialState).
+  metaedge(_x_HSM, association, _x_source, _x_Transition, _x_FinalState).
+  metaedge(_x_HSM, association, _x_owningStateMachine, _x_Transition, _x_StateMachine).
+  metaedge(_x_HSM, association, _x_owningCompositeState, _x_CompositeState, _x_CompositeState).
+  metaedge(_x_HSM, association, _x_owningStateMachine, _x_CompositeState, _x_StateMachine).
+  metaedge(_x_HSM, composition, _x_ownedSubState, _x_CompositeState, _x_State).
+  metaedge(_x_HSM, composition, _x_ownedSubState, _x_CompositeState, _x_CompositeState).
+  metaedge(_x_HSM, composition, _x_ownedSubState, _x_CompositeState, _x_InitialState).
+  metaedge(_x_HSM, composition, _x_ownedSubState, _x_CompositeState, _x_FinalState).
+  metaedge(_x_HSM, generalization, _x_general, _x_CompositeState, _x_State).
+  metaedge(_x_HSM, composition, _x_ownedState, _x_StateMachine, _x_State).
+  metaedge(_x_HSM, composition, _x_ownedState, _x_StateMachine, _x_CompositeState).
+  metaedge(_x_HSM, composition, _x_ownedState, _x_StateMachine, _x_InitialState).
+  metaedge(_x_HSM, composition, _x_ownedState, _x_StateMachine, _x_FinalState).
+  metaedge(_x_HSM, composition, _x_ownedTransition, _x_StateMachine, _x_Transition).
+  metaedge(_x_HSM, association, _x_owningCompositeState, _x_InitialState, _x_CompositeState).
+  metaedge(_x_HSM, association, _x_owningStateMachine, _x_InitialState, _x_StateMachine).
+  metaedge(_x_HSM, generalization, _x_general, _x_InitialState, _x_State).
+  metaedge(_x_HSM, association, _x_owningCompositeState, _x_FinalState, _x_CompositeState).
+  metaedge(_x_HSM, association, _x_owningStateMachine, _x_FinalState, _x_StateMachine).
+  metaedge(_x_HSM, generalization, _x_general, _x_FinalState, _x_State).
+
+  metaprop(_x_HSM, _x_name, _x_State).
+  metaprop(_x_HSM, _x_trigger, _x_Transition).
+  metaprop(_x_HSM, _x_effect, _x_Transition).
+  metaprop(_x_HSM, _x_name, _x_CompositeState).
+  metaprop(_x_HSM, _x_name, _x_InitialState).
+  metaprop(_x_HSM, _x_name, _x_FinalState).

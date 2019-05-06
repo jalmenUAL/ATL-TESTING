@@ -1,0 +1,141 @@
+model("_x_m/", _x_HSM).
+  node(_x_HSM, 1, "_x_//@ownedState.0", _x_State).
+  node(_x_HSM, 3, "_x_//@ownedState.3/@ownedSubState.0", _x_State).
+  node(_x_HSM, 8, "_x_//@ownedState.3/@ownedSubState.1", _x_State).
+  node(_x_HSM, 13, "_x_//@ownedState.3/@ownedSubState.2", _x_State).
+  node(_x_HSM, 18, "_x_//@ownedState.4/@ownedSubState.0", _x_State).
+  node(_x_HSM, 23, "_x_//@ownedState.4/@ownedSubState.1", _x_State).
+  node(_x_HSM, 28, "_x_//@ownedState.4/@ownedSubState.2", _x_State).
+  node(_x_HSM, 33, "_x_//@ownedState.4/@ownedSubState.3", _x_State).
+  node(_x_HSM, 38, "_x_//@ownedState.5/@ownedSubState.0", _x_State).
+  node(_x_HSM, 43, "_x_//@ownedState.5/@ownedSubState.1", _x_State).
+  node(_x_HSM, 48, "_x_//@ownedState.5/@ownedSubState.2", _x_State).
+  node(_x_HSM, 53, "_x_//@ownedTransition.0", _x_Transition).
+  node(_x_HSM, 61, "_x_//@ownedTransition.1", _x_Transition).
+  node(_x_HSM, 70, "_x_//@ownedTransition.2", _x_Transition).
+  node(_x_HSM, 78, "_x_//@ownedTransition.3", _x_Transition).
+  node(_x_HSM, 86, "_x_//@ownedTransition.4", _x_Transition).
+  node(_x_HSM, 94, "_x_//@ownedTransition.5", _x_Transition).
+  node(_x_HSM, 103, "_x_//@ownedTransition.6", _x_Transition).
+  node(_x_HSM, 111, "_x_//@ownedTransition.7", _x_Transition).
+  node(_x_HSM, 119, "_x_//@ownedTransition.8", _x_Transition).
+  node(_x_HSM, 127, "_x_//@ownedTransition.9", _x_Transition).
+  node(_x_HSM, 136, "_x_//@ownedTransition.10", _x_Transition).
+  node(_x_HSM, 145, "_x_//@ownedTransition.11", _x_Transition).
+  node(_x_HSM, 153, "_x_//@ownedTransition.12", _x_Transition).
+  node(_x_HSM, 161, "_x_//@ownedTransition.13", _x_Transition).
+  node(_x_HSM, 169, "_x_//@ownedTransition.14", _x_Transition).
+  node(_x_HSM, 177, "_x_//@ownedState.3", _x_CompositeState).
+  node(_x_HSM, 188, "_x_//@ownedState.4", _x_CompositeState).
+  node(_x_HSM, 202, "_x_//@ownedState.5", _x_CompositeState).
+  node(_x_HSM, 213, "_x_/", _x_StateMachine).
+  node(_x_HSM, 277, "_x_//@ownedState.1", _x_InitialState).
+  node(_x_HSM, 279, "_x_//@ownedState.2", _x_FinalState).
+
+  edge(_x_HSM, 56, "_x_//@ownedState.3/@ownedSubState.04", _x_owningCompositeState, 3, "_x_//@ownedState.3/@ownedSubState.0", 177, "_x_//@ownedState.3").
+  edge(_x_HSM, 1011, "_x_//@ownedState.3/@ownedSubState.19", _x_owningCompositeState, 8, "_x_//@ownedState.3/@ownedSubState.1", 177, "_x_//@ownedState.3").
+  edge(_x_HSM, 1516, "_x_//@ownedState.3/@ownedSubState.214", _x_owningCompositeState, 13, "_x_//@ownedState.3/@ownedSubState.2", 177, "_x_//@ownedState.3").
+  edge(_x_HSM, 2021, "_x_//@ownedState.4/@ownedSubState.019", _x_owningCompositeState, 18, "_x_//@ownedState.4/@ownedSubState.0", 188, "_x_//@ownedState.4").
+  edge(_x_HSM, 2526, "_x_//@ownedState.4/@ownedSubState.124", _x_owningCompositeState, 23, "_x_//@ownedState.4/@ownedSubState.1", 188, "_x_//@ownedState.4").
+  edge(_x_HSM, 3031, "_x_//@ownedState.4/@ownedSubState.229", _x_owningCompositeState, 28, "_x_//@ownedState.4/@ownedSubState.2", 188, "_x_//@ownedState.4").
+  edge(_x_HSM, 3536, "_x_//@ownedState.4/@ownedSubState.334", _x_owningCompositeState, 33, "_x_//@ownedState.4/@ownedSubState.3", 188, "_x_//@ownedState.4").
+  edge(_x_HSM, 4041, "_x_//@ownedState.5/@ownedSubState.039", _x_owningCompositeState, 38, "_x_//@ownedState.5/@ownedSubState.0", 202, "_x_//@ownedState.5").
+  edge(_x_HSM, 4546, "_x_//@ownedState.5/@ownedSubState.144", _x_owningCompositeState, 43, "_x_//@ownedState.5/@ownedSubState.1", 202, "_x_//@ownedState.5").
+  edge(_x_HSM, 5051, "_x_//@ownedState.5/@ownedSubState.249", _x_owningCompositeState, 48, "_x_//@ownedState.5/@ownedSubState.2", 202, "_x_//@ownedState.5").
+  edge(_x_HSM, 5556, "_x_//@ownedTransition.054", _x_target, 53, "_x_//@ownedTransition.0", 1, "_x_//@ownedState.0").
+  edge(_x_HSM, 5859, "_x_//@ownedTransition.057", _x_source, 53, "_x_//@ownedTransition.0", 277, "_x_//@ownedState.1").
+  edge(_x_HSM, 6364, "_x_//@ownedTransition.162", _x_target, 61, "_x_//@ownedTransition.1", 177, "_x_//@ownedState.3").
+  edge(_x_HSM, 6667, "_x_//@ownedTransition.165", _x_source, 61, "_x_//@ownedTransition.1", 1, "_x_//@ownedState.0").
+  edge(_x_HSM, 7273, "_x_//@ownedTransition.271", _x_target, 70, "_x_//@ownedTransition.2", 8, "_x_//@ownedState.3/@ownedSubState.1").
+  edge(_x_HSM, 7576, "_x_//@ownedTransition.274", _x_source, 70, "_x_//@ownedTransition.2", 3, "_x_//@ownedState.3/@ownedSubState.0").
+  edge(_x_HSM, 8081, "_x_//@ownedTransition.379", _x_target, 78, "_x_//@ownedTransition.3", 13, "_x_//@ownedState.3/@ownedSubState.2").
+  edge(_x_HSM, 8384, "_x_//@ownedTransition.382", _x_source, 78, "_x_//@ownedTransition.3", 8, "_x_//@ownedState.3/@ownedSubState.1").
+  edge(_x_HSM, 8889, "_x_//@ownedTransition.487", _x_target, 86, "_x_//@ownedTransition.4", 279, "_x_//@ownedState.2").
+  edge(_x_HSM, 9192, "_x_//@ownedTransition.490", _x_source, 86, "_x_//@ownedTransition.4", 13, "_x_//@ownedState.3/@ownedSubState.2").
+  edge(_x_HSM, 9697, "_x_//@ownedTransition.595", _x_target, 94, "_x_//@ownedTransition.5", 188, "_x_//@ownedState.4").
+  edge(_x_HSM, 99100, "_x_//@ownedTransition.598", _x_source, 94, "_x_//@ownedTransition.5", 177, "_x_//@ownedState.3").
+  edge(_x_HSM, 105106, "_x_//@ownedTransition.6104", _x_target, 103, "_x_//@ownedTransition.6", 18, "_x_//@ownedState.4/@ownedSubState.0").
+  edge(_x_HSM, 108109, "_x_//@ownedTransition.6107", _x_source, 103, "_x_//@ownedTransition.6", 23, "_x_//@ownedState.4/@ownedSubState.1").
+  edge(_x_HSM, 113114, "_x_//@ownedTransition.7112", _x_target, 111, "_x_//@ownedTransition.7", 33, "_x_//@ownedState.4/@ownedSubState.3").
+  edge(_x_HSM, 116117, "_x_//@ownedTransition.7115", _x_source, 111, "_x_//@ownedTransition.7", 18, "_x_//@ownedState.4/@ownedSubState.0").
+  edge(_x_HSM, 121122, "_x_//@ownedTransition.8120", _x_target, 119, "_x_//@ownedTransition.8", 28, "_x_//@ownedState.4/@ownedSubState.2").
+  edge(_x_HSM, 124125, "_x_//@ownedTransition.8123", _x_source, 119, "_x_//@ownedTransition.8", 33, "_x_//@ownedState.4/@ownedSubState.3").
+  edge(_x_HSM, 129130, "_x_//@ownedTransition.9128", _x_target, 127, "_x_//@ownedTransition.9", 279, "_x_//@ownedState.2").
+  edge(_x_HSM, 132133, "_x_//@ownedTransition.9131", _x_source, 127, "_x_//@ownedTransition.9", 28, "_x_//@ownedState.4/@ownedSubState.2").
+  edge(_x_HSM, 138139, "_x_//@ownedTransition.10137", _x_target, 136, "_x_//@ownedTransition.10", 202, "_x_//@ownedState.5").
+  edge(_x_HSM, 141142, "_x_//@ownedTransition.10140", _x_source, 136, "_x_//@ownedTransition.10", 177, "_x_//@ownedState.3").
+  edge(_x_HSM, 147148, "_x_//@ownedTransition.11146", _x_target, 145, "_x_//@ownedTransition.11", 43, "_x_//@ownedState.5/@ownedSubState.1").
+  edge(_x_HSM, 150151, "_x_//@ownedTransition.11149", _x_source, 145, "_x_//@ownedTransition.11", 38, "_x_//@ownedState.5/@ownedSubState.0").
+  edge(_x_HSM, 155156, "_x_//@ownedTransition.12154", _x_target, 153, "_x_//@ownedTransition.12", 48, "_x_//@ownedState.5/@ownedSubState.2").
+  edge(_x_HSM, 158159, "_x_//@ownedTransition.12157", _x_source, 153, "_x_//@ownedTransition.12", 43, "_x_//@ownedState.5/@ownedSubState.1").
+  edge(_x_HSM, 163164, "_x_//@ownedTransition.13162", _x_target, 161, "_x_//@ownedTransition.13", 3, "_x_//@ownedState.3/@ownedSubState.0").
+  edge(_x_HSM, 166167, "_x_//@ownedTransition.13165", _x_source, 161, "_x_//@ownedTransition.13", 48, "_x_//@ownedState.5/@ownedSubState.2").
+  edge(_x_HSM, 171172, "_x_//@ownedTransition.14170", _x_target, 169, "_x_//@ownedTransition.14", 279, "_x_//@ownedState.2").
+  edge(_x_HSM, 174175, "_x_//@ownedTransition.14173", _x_source, 169, "_x_//@ownedTransition.14", 48, "_x_//@ownedState.5/@ownedSubState.2").
+  edge(_x_HSM, 179180, "_x_//@ownedState.3178", _x_ownedSubState, 177, "_x_//@ownedState.3", 3, "_x_//@ownedState.3/@ownedSubState.0").
+  edge(_x_HSM, 182183, "_x_//@ownedState.3181", _x_ownedSubState, 177, "_x_//@ownedState.3", 8, "_x_//@ownedState.3/@ownedSubState.1").
+  edge(_x_HSM, 185186, "_x_//@ownedState.3184", _x_ownedSubState, 177, "_x_//@ownedState.3", 13, "_x_//@ownedState.3/@ownedSubState.2").
+  edge(_x_HSM, 190191, "_x_//@ownedState.4189", _x_ownedSubState, 188, "_x_//@ownedState.4", 18, "_x_//@ownedState.4/@ownedSubState.0").
+  edge(_x_HSM, 193194, "_x_//@ownedState.4192", _x_ownedSubState, 188, "_x_//@ownedState.4", 23, "_x_//@ownedState.4/@ownedSubState.1").
+  edge(_x_HSM, 196197, "_x_//@ownedState.4195", _x_ownedSubState, 188, "_x_//@ownedState.4", 28, "_x_//@ownedState.4/@ownedSubState.2").
+  edge(_x_HSM, 199200, "_x_//@ownedState.4198", _x_ownedSubState, 188, "_x_//@ownedState.4", 33, "_x_//@ownedState.4/@ownedSubState.3").
+  edge(_x_HSM, 204205, "_x_//@ownedState.5203", _x_ownedSubState, 202, "_x_//@ownedState.5", 38, "_x_//@ownedState.5/@ownedSubState.0").
+  edge(_x_HSM, 207208, "_x_//@ownedState.5206", _x_ownedSubState, 202, "_x_//@ownedState.5", 43, "_x_//@ownedState.5/@ownedSubState.1").
+  edge(_x_HSM, 210211, "_x_//@ownedState.5209", _x_ownedSubState, 202, "_x_//@ownedState.5", 48, "_x_//@ownedState.5/@ownedSubState.2").
+  edge(_x_HSM, 215216, "_x_/214", _x_ownedState, 213, "_x_/", 1, "_x_//@ownedState.0").
+  edge(_x_HSM, 218219, "_x_/217", _x_ownedState, 213, "_x_/", 277, "_x_//@ownedState.1").
+  edge(_x_HSM, 221222, "_x_/220", _x_ownedState, 213, "_x_/", 279, "_x_//@ownedState.2").
+  edge(_x_HSM, 224225, "_x_/223", _x_ownedState, 213, "_x_/", 177, "_x_//@ownedState.3").
+  edge(_x_HSM, 227228, "_x_/226", _x_ownedState, 213, "_x_/", 188, "_x_//@ownedState.4").
+  edge(_x_HSM, 230231, "_x_/229", _x_ownedState, 213, "_x_/", 202, "_x_//@ownedState.5").
+  edge(_x_HSM, 233234, "_x_/232", _x_ownedTransition, 213, "_x_/", 53, "_x_//@ownedTransition.0").
+  edge(_x_HSM, 236237, "_x_/235", _x_ownedTransition, 213, "_x_/", 61, "_x_//@ownedTransition.1").
+  edge(_x_HSM, 239240, "_x_/238", _x_ownedTransition, 213, "_x_/", 70, "_x_//@ownedTransition.2").
+  edge(_x_HSM, 242243, "_x_/241", _x_ownedTransition, 213, "_x_/", 78, "_x_//@ownedTransition.3").
+  edge(_x_HSM, 245246, "_x_/244", _x_ownedTransition, 213, "_x_/", 86, "_x_//@ownedTransition.4").
+  edge(_x_HSM, 248249, "_x_/247", _x_ownedTransition, 213, "_x_/", 94, "_x_//@ownedTransition.5").
+  edge(_x_HSM, 251252, "_x_/250", _x_ownedTransition, 213, "_x_/", 103, "_x_//@ownedTransition.6").
+  edge(_x_HSM, 254255, "_x_/253", _x_ownedTransition, 213, "_x_/", 111, "_x_//@ownedTransition.7").
+  edge(_x_HSM, 257258, "_x_/256", _x_ownedTransition, 213, "_x_/", 119, "_x_//@ownedTransition.8").
+  edge(_x_HSM, 260261, "_x_/259", _x_ownedTransition, 213, "_x_/", 127, "_x_//@ownedTransition.9").
+  edge(_x_HSM, 263264, "_x_/262", _x_ownedTransition, 213, "_x_/", 136, "_x_//@ownedTransition.10").
+  edge(_x_HSM, 266267, "_x_/265", _x_ownedTransition, 213, "_x_/", 145, "_x_//@ownedTransition.11").
+  edge(_x_HSM, 269270, "_x_/268", _x_ownedTransition, 213, "_x_/", 153, "_x_//@ownedTransition.12").
+  edge(_x_HSM, 272273, "_x_/271", _x_ownedTransition, 213, "_x_/", 161, "_x_//@ownedTransition.13").
+  edge(_x_HSM, 275276, "_x_/274", _x_ownedTransition, 213, "_x_/", 169, "_x_//@ownedTransition.14").
+
+  prop(_x_HSM, 21, "_x_//@ownedState.01", 1, "_x_//@ownedState.0", _x_name, "_x_Begin Installation").
+  prop(_x_HSM, 71, "_x_//@ownedState.3/@ownedSubState.01", 3, "_x_//@ownedState.3/@ownedSubState.0", _x_name, _x_Entry).
+  prop(_x_HSM, 121, "_x_//@ownedState.3/@ownedSubState.11", 8, "_x_//@ownedState.3/@ownedSubState.1", _x_name, "_x_Ask installing questions").
+  prop(_x_HSM, 171, "_x_//@ownedState.3/@ownedSubState.21", 13, "_x_//@ownedState.3/@ownedSubState.2", _x_name, _x_Install).
+  prop(_x_HSM, 221, "_x_//@ownedState.4/@ownedSubState.01", 18, "_x_//@ownedState.4/@ownedSubState.0", _x_name, "_x_Fix disk do").
+  prop(_x_HSM, 271, "_x_//@ownedState.4/@ownedSubState.11", 23, "_x_//@ownedState.4/@ownedSubState.1", _x_name, _x_Entry).
+  prop(_x_HSM, 321, "_x_//@ownedState.4/@ownedSubState.21", 28, "_x_//@ownedState.4/@ownedSubState.2", _x_name, "_x_Ask/confirm action").
+  prop(_x_HSM, 371, "_x_//@ownedState.4/@ownedSubState.31", 33, "_x_//@ownedState.4/@ownedSubState.3", _x_name, "_x_Show question dialog do").
+  prop(_x_HSM, 421, "_x_//@ownedState.5/@ownedSubState.01", 38, "_x_//@ownedState.5/@ownedSubState.0", _x_name, _x_Entry).
+  prop(_x_HSM, 471, "_x_//@ownedState.5/@ownedSubState.11", 43, "_x_//@ownedState.5/@ownedSubState.1", _x_name, "_x_Show question dialog do").
+  prop(_x_HSM, 521, "_x_//@ownedState.5/@ownedSubState.21", 48, "_x_//@ownedState.5/@ownedSubState.2", _x_name, "_x_Ask/confirm action").
+  prop(_x_HSM, 601, "_x_//@ownedTransition.01", 53, "_x_//@ownedTransition.0", _x_trigger, _x_init).
+  prop(_x_HSM, 681, "_x_//@ownedTransition.11", 61, "_x_//@ownedTransition.1", _x_trigger, "_x_StartInstall()").
+  prop(_x_HSM, 692, "_x_//@ownedTransition.12", 61, "_x_//@ownedTransition.1", _x_effect, "_x_StartInstall()").
+  prop(_x_HSM, 771, "_x_//@ownedTransition.21", 70, "_x_//@ownedTransition.2", _x_trigger, "_x_entry/ask").
+  prop(_x_HSM, 851, "_x_//@ownedTransition.31", 78, "_x_//@ownedTransition.3", _x_trigger, "_x_ask/install").
+  prop(_x_HSM, 931, "_x_//@ownedTransition.41", 86, "_x_//@ownedTransition.4", _x_trigger, "_x_install/end").
+  prop(_x_HSM, 1011, "_x_//@ownedTransition.51", 94, "_x_//@ownedTransition.5", _x_trigger, "_x_DiskError()").
+  prop(_x_HSM, 1022, "_x_//@ownedTransition.52", 94, "_x_//@ownedTransition.5", _x_effect, "_x_DiskError()").
+  prop(_x_HSM, 1101, "_x_//@ownedTransition.61", 103, "_x_//@ownedTransition.6", _x_trigger, "_x_entry/fix").
+  prop(_x_HSM, 1181, "_x_//@ownedTransition.71", 111, "_x_//@ownedTransition.7", _x_trigger, "_x_fix/question").
+  prop(_x_HSM, 1261, "_x_//@ownedTransition.81", 119, "_x_//@ownedTransition.8", _x_trigger, "_x_question/ask").
+  prop(_x_HSM, 1341, "_x_//@ownedTransition.91", 127, "_x_//@ownedTransition.9", _x_trigger, "_x_Stop()").
+  prop(_x_HSM, 1352, "_x_//@ownedTransition.92", 127, "_x_//@ownedTransition.9", _x_effect, "_x_Stop()").
+  prop(_x_HSM, 1431, "_x_//@ownedTransition.101", 136, "_x_//@ownedTransition.10", _x_trigger, "_x_OutOfMemory()").
+  prop(_x_HSM, 1442, "_x_//@ownedTransition.102", 136, "_x_//@ownedTransition.10", _x_effect, "_x_OutOfMemory()").
+  prop(_x_HSM, 1521, "_x_//@ownedTransition.111", 145, "_x_//@ownedTransition.11", _x_trigger, "_x_entry/question").
+  prop(_x_HSM, 1601, "_x_//@ownedTransition.121", 153, "_x_//@ownedTransition.12", _x_trigger, "_x_question/ask").
+  prop(_x_HSM, 1681, "_x_//@ownedTransition.131", 161, "_x_//@ownedTransition.13", _x_trigger, "_x_[alternative=continue]").
+  prop(_x_HSM, 1761, "_x_//@ownedTransition.141", 169, "_x_//@ownedTransition.14", _x_trigger, "_x_[alternative=stop]").
+  prop(_x_HSM, 1871, "_x_//@ownedState.31", 177, "_x_//@ownedState.3", _x_name, "_x_Install Software").
+  prop(_x_HSM, 2011, "_x_//@ownedState.41", 188, "_x_//@ownedState.4", _x_name, "_x_Disk Error").
+  prop(_x_HSM, 2121, "_x_//@ownedState.51", 202, "_x_//@ownedState.5", _x_name, "_x_Memory Low").
+  prop(_x_HSM, 2781, "_x_//@ownedState.11", 277, "_x_//@ownedState.1", _x_name, _x_init).
+  prop(_x_HSM, 2801, "_x_//@ownedState.21", 279, "_x_//@ownedState.2", _x_name, _x_finish).

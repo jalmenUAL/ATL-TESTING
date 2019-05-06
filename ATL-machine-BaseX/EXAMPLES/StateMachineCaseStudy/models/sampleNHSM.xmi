@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NHSM:StateMachine xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:NHSM="urn:SimpleNonHierarchicalStateMachine.ecore" xsi:schemaLocation="urn:SimpleNonHierarchicalStateMachine.ecore C:/Users/Romina/workspace/StateMachineCaseStudy/metamodels/SimpleNonHierarchicalStateMachine.ecore">
+  <ownedState name="Begin Installation"/>
+  <ownedState xsi:type="NHSM:InitialState" name="init"/>
+  <ownedState xsi:type="NHSM:FinalState" name="finish"/>
+  <ownedState name="Install Software"/>
+  <ownedState name="Disk Error"/>
+  <ownedState name="Memory Low"/>
+  <ownedTransition trigger="init" target="//@ownedState.0" source="//@ownedState.1"/>
+  <ownedTransition trigger="install/end" target="//@ownedState.2" source="//@ownedState.3"/>
+  <ownedTransition trigger="StartInstall()" target="//@ownedState.3" source="//@ownedState.0">
+    <effect>StartInstall()</effect>
+  </ownedTransition>
+  <ownedTransition trigger="DiskError()" target="//@ownedState.4" source="//@ownedState.3">
+    <effect>DiskError()</effect>
+  </ownedTransition>
+  <ownedTransition trigger="Stop()" target="//@ownedState.2" source="//@ownedState.4">
+    <effect>Stop()</effect>
+  </ownedTransition>
+  <ownedTransition trigger="OutOfMemory()" target="//@ownedState.5" source="//@ownedState.3">
+    <effect>OutOfMemory()</effect>
+  </ownedTransition>
+  <ownedTransition trigger="[alternative=continue]" target="//@ownedState.3" source="//@ownedState.5"/>
+  <ownedTransition trigger="[alternative=stop]" target="//@ownedState.2" source="//@ownedState.5"/>
+</NHSM:StateMachine>

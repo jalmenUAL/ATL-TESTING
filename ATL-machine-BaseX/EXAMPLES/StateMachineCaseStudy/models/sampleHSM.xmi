@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HSM:StateMachine xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HSM="urn:SimpleHierarchicalStateMachine.ecore" xsi:schemaLocation="urn:SimpleHierarchicalStateMachine.ecore ../metamodels/SimpleHierarchicalStateMachine.ecore">
+  <ownedState name="Begin Installation"/>
+  <ownedState xsi:type="HSM:InitialState" name="init"/>
+  <ownedState xsi:type="HSM:FinalState" name="finish"/>
+  <ownedState xsi:type="HSM:CompositeState" name="Install Software">
+    <ownedSubState name="Entry" owningCompositeState="//@ownedState.3"/>
+    <ownedSubState name="Ask installing questions" owningCompositeState="//@ownedState.3"/>
+    <ownedSubState name="Install" owningCompositeState="//@ownedState.3"/>
+  </ownedState>
+  <ownedState xsi:type="HSM:CompositeState" name="Disk Error">
+    <ownedSubState name="Fix disk do" owningCompositeState="//@ownedState.4"/>
+    <ownedSubState name="Entry" owningCompositeState="//@ownedState.4"/>
+    <ownedSubState name="Ask/confirm action" owningCompositeState="//@ownedState.4"/>
+    <ownedSubState name="Show question dialog do" owningCompositeState="//@ownedState.4"/>
+  </ownedState>
+  <ownedState xsi:type="HSM:CompositeState" name="Memory Low">
+    <ownedSubState name="Entry" owningCompositeState="//@ownedState.5"/>
+    <ownedSubState name="Show question dialog do" owningCompositeState="//@ownedState.5"/>
+    <ownedSubState name="Ask/confirm action" owningCompositeState="//@ownedState.5"/>
+  </ownedState>
+  <ownedTransition trigger="init" target="//@ownedState.0" source="//@ownedState.1"/>
+  <ownedTransition trigger="StartInstall()" target="//@ownedState.3" source="//@ownedState.0">
+    <effect>StartInstall()</effect>
+  </ownedTransition>
+  <ownedTransition trigger="entry/ask" target="//@ownedState.3/@ownedSubState.1" source="//@ownedState.3/@ownedSubState.0"/>
+  <ownedTransition trigger="ask/install" target="//@ownedState.3/@ownedSubState.2" source="//@ownedState.3/@ownedSubState.1"/>
+  <ownedTransition trigger="install/end" target="//@ownedState.2" source="//@ownedState.3/@ownedSubState.2"/>
+  <ownedTransition trigger="DiskError()" target="//@ownedState.4" source="//@ownedState.3">
+    <effect>DiskError()</effect>
+  </ownedTransition>
+  <ownedTransition trigger="entry/fix" target="//@ownedState.4/@ownedSubState.0" source="//@ownedState.4/@ownedSubState.1"/>
+  <ownedTransition trigger="fix/question" target="//@ownedState.4/@ownedSubState.3" source="//@ownedState.4/@ownedSubState.0"/>
+  <ownedTransition trigger="question/ask" target="//@ownedState.4/@ownedSubState.2" source="//@ownedState.4/@ownedSubState.3"/>
+  <ownedTransition trigger="Stop()" target="//@ownedState.2" source="//@ownedState.4/@ownedSubState.2">
+    <effect>Stop()</effect>
+  </ownedTransition>
+  <ownedTransition trigger="OutOfMemory()" target="//@ownedState.5" source="//@ownedState.3">
+    <effect>OutOfMemory()</effect>
+  </ownedTransition>
+  <ownedTransition trigger="entry/question" target="//@ownedState.5/@ownedSubState.1" source="//@ownedState.5/@ownedSubState.0"/>
+  <ownedTransition trigger="question/ask" target="//@ownedState.5/@ownedSubState.2" source="//@ownedState.5/@ownedSubState.1"/>
+  <ownedTransition trigger="[alternative=continue]" target="//@ownedState.3/@ownedSubState.0" source="//@ownedState.5/@ownedSubState.2"/>
+  <ownedTransition trigger="[alternative=stop]" target="//@ownedState.2" source="//@ownedState.5/@ownedSubState.2"/>
+</HSM:StateMachine>
